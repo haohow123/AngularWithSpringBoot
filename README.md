@@ -12,6 +12,7 @@ Java : JDK 1.8 up
 frontend:使用windows cmd
 指令:
 node -v & npm -v 確認node 及 npm 有無安裝
+
 -------node npm 安裝成功------
 npm start 
 開啟lite serve (可至localhost:4200確認是否開啟成功)
@@ -40,5 +41,4 @@ Apply -> Run
 angular_quickStart : https://angular.io/guide/quickstart
 How to integrate Angular 4 with SpringBoot RestApi using SpringToolSuite :　http://javasampleapproach.com/java-integration/integrate-angular-4-springboot-web-app-springtoolsuite
 Spring Boot Angular 5 Applications : https://shekhargulati.com/2017/11/08/a-minimalist-guide-to-building-spring-boot-angular-5-applications/
-
 Accessing data with MySQL : https://spring.io/guides/gs/accessing-data-mysql/
