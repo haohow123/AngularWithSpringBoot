@@ -33,9 +33,9 @@ Run As ->Mave install
 backend:Eclipse
 Run As -> Maven Clean
 
-Run As -> Maven Build
-Goals 輸入spring-boot:run
-Apply -> Run
+Run As -> Maven Build 
+Goals 輸入spring-boot:run 
+Apply -> Run 
 將frontend dist內資料移至 backend內架起(localhost:8080)
 
 
