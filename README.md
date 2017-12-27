@@ -23,9 +23,12 @@ ng build
 
 ------------------------------
 
-frotend:Eclipse
+frotend:Eclipse 
+
 Run As ->Maven Clean
+
 Run As ->Mave install
+
 等同於ng build (POM內有使用maven編譯Angular5套件)
 
 -------------------------------
