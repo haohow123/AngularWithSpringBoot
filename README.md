@@ -16,9 +16,11 @@ node -v & npm -v 確認node 及 npm 有無安裝
 -------node npm 安裝成功------
 
 npm start 
+
 開啟lite serve (可至localhost:4200確認是否開啟成功)
 
 ng build 
+
 編譯TypeScript檔案至dist資料夾內，因後台有寫POM檔可自行將此資料夾檔案移至SpringBootJ網頁開起畫面，不需手動移檔案
 
 ------------------------------
@@ -43,6 +45,8 @@ Goals 輸入spring-boot:run
 Apply -> Run 
 
 將frontend dist內資料移至 backend內架起(localhost:8080)
+
+
 
 
 #參考文件:
