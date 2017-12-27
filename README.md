@@ -37,13 +37,19 @@ backend:Eclipse
 Run As -> Maven Clean
 
 Run As -> Maven Build 
+
 Goals 輸入spring-boot:run 
+
 Apply -> Run 
+
 將frontend dist內資料移至 backend內架起(localhost:8080)
 
 
 #參考文件:
 angular_quickStart : https://angular.io/guide/quickstart
+
 How to integrate Angular 4 with SpringBoot RestApi using SpringToolSuite :　http://javasampleapproach.com/java-integration/integrate-angular-4-springboot-web-app-springtoolsuite
+
 Spring Boot Angular 5 Applications : https://shekhargulati.com/2017/11/08/a-minimalist-guide-to-building-spring-boot-angular-5-applications/
+
 Accessing data with MySQL : https://spring.io/guides/gs/accessing-data-mysql/
