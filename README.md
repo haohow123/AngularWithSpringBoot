@@ -2,36 +2,33 @@
 我愛教練，教練愛我<br>
 題目:試用新技術做出CRM網頁
 
-#環境架設:
-Spring Tool Suite(STS) : Eclipse plugin也可
+#環境架設:<br>
+Spring Tool Suite(STS) : Eclipse plugin也可<br>
 
-※非必要
-nodeJs : https://nodejs.org/en/download/
-Java : JDK 1.8 up
+※非必要<br>
+nodeJs : https://nodejs.org/en/download/<br>
+Java : JDK 1.8 up<br>
 
-#開發方式推薦(需安裝好nodeJS) : 
-frontend:使用windows cmd
-指令:
-node -v & npm -v 確認node 及 npm 有無安裝
+#開發方式推薦(需安裝好nodeJS) : <br>
+frontend:使用windows cmd<br>
+指令:<br>
+node -v & npm -v 確認node 及 npm 有無安裝<br>
 
 -------node npm 安裝成功------
 
-npm start 
+npm start <br>
+開啟lite serve (可至localhost:4200確認是否開啟成功)<br>
 
-開啟lite serve (可至localhost:4200確認是否開啟成功)
-
-ng build 
-
-編譯TypeScript檔案至dist資料夾內，因後台有寫POM檔可自行將此資料夾檔案移至SpringBootJ網頁開起畫面，不需手動移檔案
+ng build <br>
+編譯TypeScript檔案至dist資料夾內，因後台有寫POM檔可自行將此資料夾檔案移至SpringBootJ網頁開起畫面，不需手動移檔案<br>
 
 ------------------------------
 
-frotend:Eclipse 
+frotend:Eclipse <br>
 
 Run As ->Maven Clean
 
-Run As ->Mave install
-
+Run As ->Mave install<br>
 等同於ng build (POM內有使用maven編譯Angular5套件)
 
 -------------------------------
