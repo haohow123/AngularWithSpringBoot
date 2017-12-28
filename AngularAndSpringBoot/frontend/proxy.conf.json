@@ -2,5 +2,9 @@
 	"/api": {
 		"target": "http://localhost:8080",
 		"secure": false
+	},
+	"/Member":{
+		"target":"http://localhost:8080",
+		"secure":false
 	}
 }

@@ -8,6 +8,6 @@ public class WebRestController {
 	
 	@RequestMapping("/api/hi")
 	public String hi(){
-		return "Hello World From Backend!";
+		return "Hi I'm from SpringBoot";
 	}
 }
