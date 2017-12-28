@@ -3,13 +3,15 @@
 題目:試用新技術做出CRM網頁
 
 #環境架設:<br>
-Spring Tool Suite(STS) : Eclipse plugin也可<br>
+  - Java : *JDK* 1.8
+  - MySQL(Schema已附在專案中)
 
 ※非必要<br>
+Spring Tool Suite(STS) : Eclipse plugin也可<br>
 nodeJs : https://nodejs.org/en/download/<br>
-Java : JDK 1.8 up<br>
 
 #開發方式推薦(需安裝好nodeJS) : <br>
+
 frontend:使用windows cmd<br>
 指令:<br>
 node -v & npm -v 確認node 及 npm 有無安裝<br>
@@ -43,6 +45,14 @@ Goals 輸入spring-boot:run<br>
 Apply -> Run<br>
 
 將frontend dist內資料移至 backend內架起(localhost:8080)
+
+
+#初始專案內容
+ - localhost:8080/api/hi  確認是否架起SpringBoot
+ - localhost:4200         確認是否架起lite server
+ - localhost:4200/api/hi  確認是否可從lite server打請求至localhost:8080/api/hi <br>
+       - 設定檔在 fronted/proxy.conf.json <br>
+     - 更改設定需重啟4200(ctrl + c停止伺服器 -> npm start)
 
 
 
