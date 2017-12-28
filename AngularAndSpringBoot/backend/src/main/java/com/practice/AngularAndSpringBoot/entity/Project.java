@@ -1,4 +1,4 @@
-package com.practice.entity;
+package com.practice.AngularAndSpringBoot.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
