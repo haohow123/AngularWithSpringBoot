@@ -36,20 +36,20 @@ Run As ->Mave install
 -------------------------------
 
 backend:Eclipse
-Run As -> Maven Clean
+Run As -> Maven Clean<br>
 
-Run As -> Maven Build 
+Run As -> Maven Build<br>
 
-Goals 輸入spring-boot:run 
+Goals 輸入spring-boot:run<br> 
 
-Apply -> Run 
+Apply -> Run<br>
 
 將frontend dist內資料移至 backend內架起(localhost:8080)
 
 
 
 
-#參考文件:
+#參考文件:<br />
 angular_quickStart : https://angular.io/guide/quickstart
 
 How to integrate Angular 4 with SpringBoot RestApi using SpringToolSuite :　http://javasampleapproach.com/java-integration/integrate-angular-4-springboot-web-app-springtoolsuite
