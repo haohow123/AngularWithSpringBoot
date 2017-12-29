@@ -18,26 +18,29 @@ public class JoinProjectDate implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(unique=true, nullable=false)
 	private int id;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="JOIN_DATE")
-	private Date joinDate;
+	@Column(name="JOIN_DATE_DTM")
+	private Date joinDateDtm;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="LEAVE_DATA")
-	private Date leaveData;
+	@Column(name="LEAVE_DATA_DTM")
+	private Date leaveDataDtm;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name="START_DATE")
 	private Date startDate;
 
 	//bi-directional many-to-one association to Member
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne
+	@JoinColumn(name="MEMBER_ID")
 	private Member member;
 
 	//bi-directional many-to-one association to Project
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne
+	@JoinColumn(name="PROJECT_ID")
 	private Project project;
 
 	//bi-directional many-to-one association to WorkingHour
@@ -55,20 +58,20 @@ public class JoinProjectDate implements Serializable {
 		this.id = id;
 	}
 
-	public Date getJoinDate() {
-		return this.joinDate;
+	public Date getJoinDateDtm() {
+		return this.joinDateDtm;
 	}
 
-	public void setJoinDate(Date joinDate) {
-		this.joinDate = joinDate;
+	public void setJoinDateDtm(Date joinDateDtm) {
+		this.joinDateDtm = joinDateDtm;
 	}
 
-	public Date getLeaveData() {
-		return this.leaveData;
+	public Date getLeaveDataDtm() {
+		return this.leaveDataDtm;
 	}
 
-	public void setLeaveData(Date leaveData) {
-		this.leaveData = leaveData;
+	public void setLeaveDataDtm(Date leaveDataDtm) {
+		this.leaveDataDtm = leaveDataDtm;
 	}
 
 	public Date getStartDate() {

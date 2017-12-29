@@ -11,31 +11,32 @@ import java.util.List;
  * 
  */
 @Entity
+@Table(name="PROJECT")
 @NamedQuery(name="Project.findAll", query="SELECT p FROM Project p")
 public class Project implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(unique=true, nullable=false)
 	private int id;
 
+	@Column(name="PROJECT_COMPANY", length=200)
+	private String projectCompany;
+
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="PROJECT_END_DATE")
-	private Date projectEndDate;
+	@Column(name="PROJECT_END_DATE_DTM")
+	private Date projectEndDateDtm;
 
 	@Column(name="PROJECT_ID")
 	private int projectId;
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="PROJECT_NAME")
-	private Date projectName;
+	@Column(name="PROJECT_NAME", length=200)
+	private String projectName;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="PROJECT_START_DATE")
-	private Date projectStartDate;
-
-	@Column(name="RICH_PAPA")
-	private String richPapa;
+	@Column(name="PROJECT_START_DATE_DTM")
+	private Date projectStartDateDtm;
 
 	//bi-directional many-to-one association to JoinProjectDate
 	@OneToMany(mappedBy="project")
@@ -52,12 +53,20 @@ public class Project implements Serializable {
 		this.id = id;
 	}
 
-	public Date getProjectEndDate() {
-		return this.projectEndDate;
+	public String getProjectCompany() {
+		return this.projectCompany;
 	}
 
-	public void setProjectEndDate(Date projectEndDate) {
-		this.projectEndDate = projectEndDate;
+	public void setProjectCompany(String projectCompany) {
+		this.projectCompany = projectCompany;
+	}
+
+	public Date getProjectEndDateDtm() {
+		return this.projectEndDateDtm;
+	}
+
+	public void setProjectEndDateDtm(Date projectEndDateDtm) {
+		this.projectEndDateDtm = projectEndDateDtm;
 	}
 
 	public int getProjectId() {
@@ -68,28 +77,20 @@ public class Project implements Serializable {
 		this.projectId = projectId;
 	}
 
-	public Date getProjectName() {
+	public String getProjectName() {
 		return this.projectName;
 	}
 
-	public void setProjectName(Date projectName) {
+	public void setProjectName(String projectName) {
 		this.projectName = projectName;
 	}
 
-	public Date getProjectStartDate() {
-		return this.projectStartDate;
+	public Date getProjectStartDateDtm() {
+		return this.projectStartDateDtm;
 	}
 
-	public void setProjectStartDate(Date projectStartDate) {
-		this.projectStartDate = projectStartDate;
-	}
-
-	public String getRichPapa() {
-		return this.richPapa;
-	}
-
-	public void setRichPapa(String richPapa) {
-		this.richPapa = richPapa;
+	public void setProjectStartDateDtm(Date projectStartDateDtm) {
+		this.projectStartDateDtm = projectStartDateDtm;
 	}
 
 	public List<JoinProjectDate> getJoinProjectDates() {

@@ -12,32 +12,35 @@ import java.util.List;
  */
 @Entity
 @Table(name="MEMBERS")
+@NamedQuery(name="Member.findAll", query="SELECT m FROM Member m")
 public class Member implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(unique=true, nullable=false)
 	private int id;
 
-	@Column(name="CN_NAME")
+	@Column(name="CN_NAME", length=200)
 	private String cnName;
 
-	@Column(name="EN_NAME")
+	@Column(name="EN_NAME", length=200)
 	private String enName;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="ENTRY_DATE")
-	private Date entryDate;
+	@Column(name="ENTRY_DATE_DTM")
+	private Date entryDateDtm;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="LEAVE_DATE")
-	private Date leaveDate;
+	@Column(name="LEAVE_DATE_DTM")
+	private Date leaveDateDtm;
 
-	private int mobile;
+	@Column(length=10)
+	private String mobile;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="UPDATE_DATE")
-	private Date updateDate;
+	@Column(name="UPDATE_DATE_DTM")
+	private Date updateDateDtm;
 
 	//bi-directional many-to-one association to JoinProjectDate
 	@OneToMany(mappedBy="member")
@@ -70,36 +73,36 @@ public class Member implements Serializable {
 		this.enName = enName;
 	}
 
-	public Date getEntryDate() {
-		return this.entryDate;
+	public Date getEntryDateDtm() {
+		return this.entryDateDtm;
 	}
 
-	public void setEntryDate(Date entryDate) {
-		this.entryDate = entryDate;
+	public void setEntryDateDtm(Date entryDateDtm) {
+		this.entryDateDtm = entryDateDtm;
 	}
 
-	public Date getLeaveDate() {
-		return this.leaveDate;
+	public Date getLeaveDateDtm() {
+		return this.leaveDateDtm;
 	}
 
-	public void setLeaveDate(Date leaveDate) {
-		this.leaveDate = leaveDate;
+	public void setLeaveDateDtm(Date leaveDateDtm) {
+		this.leaveDateDtm = leaveDateDtm;
 	}
 
-	public int getMobile() {
+	public String getMobile() {
 		return this.mobile;
 	}
 
-	public void setMobile(int mobile) {
+	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
 
-	public Date getUpdateDate() {
-		return this.updateDate;
+	public Date getUpdateDateDtm() {
+		return this.updateDateDtm;
 	}
 
-	public void setUpdateDate(Date updateDate) {
-		this.updateDate = updateDate;
+	public void setUpdateDateDtm(Date updateDateDtm) {
+		this.updateDateDtm = updateDateDtm;
 	}
 
 	public List<JoinProjectDate> getJoinProjectDates() {
