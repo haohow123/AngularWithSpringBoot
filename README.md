@@ -18,7 +18,7 @@ node -v & npm -v 確認node 及 npm 有無安裝<br>
 
 -------node npm 安裝成功------<br><br>
 
-※位置: xxxx\AngularAndSpringBoot\frontend
+※位置: xxxx\AngularAndSpringBoot\frontend<br>
 ex:C:\Users\user\Desktop\GitHub\PracticeCrm\AngularAndSpringBoot\frontend
 
 npm start <br>
