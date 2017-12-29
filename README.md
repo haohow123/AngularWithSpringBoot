@@ -16,7 +16,7 @@ frontend:使用windows cmd<br>
 指令:<br>
 node -v & npm -v 確認node 及 npm 有無安裝<br>
 
--------node npm 安裝成功------<br><br>
+-------node npm 安裝成功------
 
 ※位置: xxxx\AngularAndSpringBoot\frontend<br>
 ex:C:\Users\user\Desktop\GitHub\PracticeCrm\AngularAndSpringBoot\frontend
