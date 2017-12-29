@@ -2,7 +2,7 @@
 我愛教練，教練愛我<br>
 題目:試用新技術做出CRM網頁
 
-#環境架設:<br>
+### 環境架設:<br>
   - Java : *JDK* 1.8
   - MySQL(Schema已附在專案中)
 
@@ -10,13 +10,15 @@
 Spring Tool Suite(STS) : Eclipse plugin也可<br>
 nodeJs : https://nodejs.org/en/download/<br>
 
-#開發方式推薦(需安裝好nodeJS) : <br>
+### 開發方式推薦(需安裝好nodeJS) : <br>
 
 frontend:使用windows cmd<br>
 指令:<br>
 node -v & npm -v 確認node 及 npm 有無安裝<br>
 
 -------node npm 安裝成功------
+# 位置: xxxx\AngularAndSpringBoot\frontend
+ex:C:\Users\user\Desktop\GitHub\PracticeCrm\AngularAndSpringBoot\frontend
 
 npm start <br>
 開啟lite serve (可至localhost:4200確認是否開啟成功)<br>
