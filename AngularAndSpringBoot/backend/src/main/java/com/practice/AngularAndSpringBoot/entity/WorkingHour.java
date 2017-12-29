@@ -17,18 +17,20 @@ public class WorkingHour implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(unique=true, nullable=false)
 	private int id;
 
-	private String date;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date date;
 
+	@Column(length=45)
 	private String week;
 
-	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name="WORK_HOUR")
-	private Date workHour;
+	private int workHour;
 
 	//bi-directional many-to-one association to JoinProjectDate
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne
 	@JoinColumn(name="ME_PRJ_ID")
 	private JoinProjectDate joinProjectDate;
 
@@ -43,11 +45,11 @@ public class WorkingHour implements Serializable {
 		this.id = id;
 	}
 
-	public String getDate() {
+	public Date getDate() {
 		return this.date;
 	}
 
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 
@@ -59,11 +61,11 @@ public class WorkingHour implements Serializable {
 		this.week = week;
 	}
 
-	public Date getWorkHour() {
+	public int getWorkHour() {
 		return this.workHour;
 	}
 
-	public void setWorkHour(Date workHour) {
+	public void setWorkHour(int workHour) {
 		this.workHour = workHour;
 	}
 
