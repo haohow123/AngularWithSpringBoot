@@ -1,0 +1,188 @@
+<div class="container-fluid" style="background:url('../../assets/images/page_bg.jpg') repeat-x">
+  <header class="row" style="padding:25px 0px">
+    <section class="col-md-3">
+      <img src='http://www.hy-tech.com.tw/images/LOGO.png' style="margin-left: 32px;margin-top:-17px">
+    </section>
+    <section class="col-md-8">
+      <a>工時管理</a>
+      <a href="/HYCRM/manager/WorkStatus">輸入工時</a>
+      <a href="/HYCRM/manager/StatWorkTimeEmpRpt">個人工時統計報表</a>
+    </section>
+    <section class="col-md-1">
+      <a>
+        <i class="icon-user icon-white"></i>Henry.Hsu</a>
+      <div>
+        <div>CAS</div>
+        <div>HR</div>
+        <div>登出</div>
+      </div>
+    </section>
+  </header>
+  <section class="row breadcrumb">
+    <p style="margin:auto">輸入工時</p>
+  </section>
+  <section class="row">
+    <form class="col-md-8">
+      <fieldset style='margin-left: 15px;border: 1px solid black;padding-left: 15px;'>
+        <legend style="width:auto">搜尋條件:</legend>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-3">
+            <span>姓名:</span>
+            <input class="form-control" id="name" type="text" value="Henry.Hsu" disabled style="width:110px;margin-bottom: 10px;margin-right: 15px">
+          </div>
+          <div class="col-md-5">
+            <span>工作週:</span>
+            <input id="datepicker" value="選取日期" style=" width:210px;cursor:pointer;margin-bottom: 10px;margin-left: 10px" type="text">
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-primary" style="margin-left:10px;margin-right:10px;margin-bottom: 10px">
+              <i class="icon-search"></i> 搜尋</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <form>
+      <fieldset style='margin-left: 15px;border: 1px solid black;padding-left: 15px;'>
+        <legend style="width:auto">快速功能:</legend>
+        <button type="button" class="btn btn-primary" id="weekChange" value="this" style="margin-right:10px;margin-bottom: 10px">本　週</button>
+        <button type="button" class="btn btn-primary" id="weekChange" value="prev" style="margin-right:10px;margin-bottom: 10px">上一週</button>
+        <button type="button" class="btn btn-primary" id="weekChange" value="next" style="margin-right:10px;margin-bottom: 10px">下一週</button>
+      </fieldset>
+    </form>
+  </section>
+  <section class="row">
+    <button id="save" class="btn btn-primary" style="width:30%;">存檔</button>
+    <div style="width:59%"></div>
+    <button id="copyFromLastWeek" class="btn btn-primary" style="width:11%;">自上週帶入工時</button>
+  </section>
+  <section class="row">
+    <table id="workHoursTable" class="workHoursTable">
+      <tbody>
+        <tr id="trMain">
+          <th class="workHoursTable" style="text-align:right; padding:10px; height:25px;">
+            <span>專案名稱</span>
+            <input id="empid" type="hidden" value="294">
+          </th>
+          <th class="workHoursTable" style="color: red;">
+            <span id="weekdayDate0">01-01</span>
+            <br>
+            <span>星期一</span>
+            <span id="fixHours0" style="display: none;" hidden="hidden">-8</span>
+          </th>
+          <th class="workHoursTable" style="">
+            <span id="weekdayDate1">01-02</span>
+            <br>
+            <span>星期二</span>
+            <span id="fixHours1" style="display: none;" hidden="hidden">0</span>
+          </th>
+          <th class="workHoursTable" style="">
+            <span id="weekdayDate2">01-03</span>
+            <br>
+            <span>星期三</span>
+            <span id="fixHours2" style="display: none;" hidden="hidden">0</span>
+          </th>
+          <th class="workHoursTable" style="">
+            <span id="weekdayDate3">01-04</span>
+            <br>
+            <span>星期四</span>
+            <span id="fixHours3" style="display: none;" hidden="hidden">0</span>
+          </th>
+          <th class="workHoursTable" style="">
+            <span id="weekdayDate4">01-05</span>
+            <br>
+            <span>星期五</span>
+            <span id="fixHours4" style="display: none;" hidden="hidden">0</span>
+          </th>
+          <th class="workHoursTable" style="color: red;">
+            <span id="weekdayDate5">01-06</span>
+            <br>
+            <span>星期六</span>
+            <span id="fixHours5" style="display: none;" hidden="hidden">0</span>
+          </th>
+          <th class="workHoursTable" style="color: red;">
+            <span id="weekdayDate6">01-07</span>
+            <br>
+            <span>星期日</span>
+            <span id="fixHours6" style="display: none;" hidden="hidden">0</span>
+          </th>
+          <th class="workHoursTable func">合計</th>
+          <th style="width:7%;" class="workHoursTable func">操作</th>
+          <th class="workHoursTable func" style="width:35%;">備註</th>
+        </tr>
+        <tr id="tr0">
+          <th style="width:15%; padding:10px; text-align:right;" class="workHoursTable">
+            <span>U-MING_FSM</span>
+            <input class="pjid" type="hidden" value="PRJ20170035">
+          </th>
+          <input class="pjidjoin" type="hidden" value="20170906">
+          <input class="pjidleave" type="hidden" value="">
+          <td class="workHoursTable">
+            <input class="ManHourData" type="text" value="0" style="width:24px;margin-bottom:2px;margin-top:2px;text-align:center;" maxlength="2">
+          </td>
+          <td class="workHoursTable">
+            <input class="ManHourData" type="text" value="0" style="width:24px;margin-bottom:2px;margin-top:2px;text-align:center;" maxlength="2">
+          </td>
+          <td class="workHoursTable">
+            <input class="ManHourData" type="text" value="0" style="width:24px;margin-bottom:2px;margin-top:2px;text-align:center;" maxlength="2">
+          </td>
+          <td class="workHoursTable">
+            <input class="ManHourData" type="text" value="0" style="width:24px;margin-bottom:2px;margin-top:2px;text-align:center;" maxlength="2">
+          </td>
+          <td class="workHoursTable">
+            <input class="ManHourData" type="text" value="0" style="width:24px;margin-bottom:2px;margin-top:2px;text-align:center;" maxlength="2">
+          </td>
+          <td class="workHoursTable">
+            <input class="ManHourData" type="text" value="0" style="width:24px;margin-bottom:2px;margin-top:2px;text-align:center;" maxlength="2">
+          </td>
+          <td class="workHoursTable">
+            <input class="ManHourData" type="text" value="0" style="width:24px;margin-bottom:2px;margin-top:2px;text-align:center;" maxlength="2">
+          </td>
+          <td class="sumWorkHoursTable func">
+            <span id="sumpj0">0</span>
+          </td>
+          <td class="sumWorkHoursTable func">
+            <a style="cursor : pointer;" onclick="javascript:openCopyToDateDlg('U-MING_FSM', 'PRJ20170035', '20170906', '', 'proj0', 'tr0')">
+              <i class="ui-icon ui-icon-copy"></i>複製工時</a>
+          </td>
+          <td class="sumWorkHoursTable" align="left" style="height:98%" rowspan="8">
+            <textarea id="Note" style="width:96%; height:462px;margin-bottom:0px;margin-top:0px;"></textarea>
+          </td>
+        </tr>
+
+        <tr>
+          <th class="workHoursTable" style="height:25px; padding:10px; text-align:right;">
+            <span>天數小計</span>
+          </th>
+          <td class="sumWorkHoursTable">
+            <span id="sumwd0">0</span>
+          </td>
+          <td class="sumWorkHoursTable">
+            <span id="sumwd1">0</span>
+          </td>
+          <td class="sumWorkHoursTable">
+            <span id="sumwd2">0</span>
+          </td>
+          <td class="sumWorkHoursTable">
+            <span id="sumwd3">0</span>
+          </td>
+          <td class="sumWorkHoursTable">
+            <span id="sumwd4">0</span>
+          </td>
+          <td class="sumWorkHoursTable">
+            <span id="sumwd5">0</span>
+          </td>
+          <td class="sumWorkHoursTable">
+            <span id="sumwd6">0</span>
+          </td>
+          <td class="sumWorkHoursTable">
+            <span id="ttsum">0</span>
+          </td>
+          <td class="sumWorkHoursTable">
+            <span></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>

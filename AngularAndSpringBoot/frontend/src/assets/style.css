@@ -1,0 +1,271 @@
+/*
+ 2012/7/13 Joe 上傳 body,p,span,td,div with !important
+ 		   Winni 增加 DialogForm 相關設定,
+ 2012/7/16
+ 		   Winni 增加validate label相關設定
+ 2012/7/18
+ 		   Winni 修改DialogForm相關設定
+ 		   line 22 先暫時去掉input
+ 2012/7/20
+ 		   Winni 修改DialogForm input相關設定
+ 		        修改 global相關設定 insert li & a
+ 		        修改 .nav-collapse 部分參數
+ 2012/7/24
+ 		   Joe加入 input的字體大小跟字型設定
+ 2012/7/26
+ 		   Winni 修改 bootstrap table-bordered th & label 設定
+ 2012/7/27
+ 		   Joe remove .SreachBar
+ 		   form改為 .SearchFrom
+ 2012/8/7  Winni 新增  table, handler 相關設定
+ 2012/8/7  Joe 修改  table, handler 相關設定
+ 2012/8/9  Winni table, handler 相關設定搬到 callerhandler頁面
+ 2012/9/28 Jack 修改bootstrap 的 btn-group 讓他在firefox顯示正常
+				修改bootstrap 的 icon 讓icon不要在字上面
+				增加 i.ui-icon 可以讓jQuery的icon可以用在  i 的 class
+				增加 span.ui-icon 讓jQuery的icon不斷行
+*/	
+		
+	/*Joe*/
+body,p,span,td,th,div,select,textarea,label,button,li,a,input
+      {
+      	border-radius:0px;
+          font-family: "微軟正黑體" !important;
+          font-size: 16px !important;
+      }
+      select,span
+      {
+	border-color:#AAA;
+      }
+      select
+      {
+      	padding: 0px !important;
+          height:28px !important;
+      }
+    
+/* 修改 bootstrap Style 樣式   */
+.header .navbar-inner {
+	background-image: none;
+	background-color: inherit;
+	border: none;
+	filter: none;
+}
+.header .nav li.dropdown > .dropdown-toggle .caret {
+    border-bottom-color: white;
+    border-top-color: white;
+}
+.header .nav li.dropdown.open > 
+.dropdown-toggle {
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	background: #FF4D01;
+	background: -moz-linear-gradient(19% 75% 90deg, #FF4D01, #FF8924);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FF8924), to(#FF4D01));
+	color: white;
+}
+.header .nav > li > a {
+    color: white;
+    text-shadow: none;
+}
+button, input, select, textarea, .btn {
+	vertical-align: baseline;
+}
+.table th, .table td{
+	vertical-align: baseline;
+}
+.forms th, .forms td {
+    border-top: inherit;
+    vertical-align: baseline;
+}
+.forms th {
+	text-align: right;
+}
+
+/* END bootstrap */
+/* bootstrap 影響 jQuery UI 的Style 改進 */
+.ui-pg-input {
+	width: auto;
+}
+.hasDatepicker {
+	cursor: pointer;
+}
+/* END 影響 jQuery UI */
+.footerTxt
+      {
+          float: left;
+          margin: 30px 0 0 0px;
+          font-size: 11px;
+          color: #757575;
+          line-height: 18px;
+      }
+      .JQunderline > span
+      {
+      	cursor:pointer;
+      	text-decoration:underline;
+      }
+      .SearchForm 
+      { 
+      	text-align:left;
+      	margin:0px ;
+      }
+      .SearchForm > fieldset > span
+      {
+         padding:0px 5px;
+     	   text-align:center;
+         margin-top :-30px\9;
+      }
+      .SearchForm > fieldset > span > label
+      {
+         display: inline;
+      }
+      .SearchForm > fieldset > span > input
+      {
+         display: inline;
+      }
+      .SearchForm > fieldset > legend
+      {
+         text-align:left;
+         width:100px;
+         border:0px;
+         margin:0px 5px 10px 0px;
+         height:23px;
+      }
+      .SearchForm > fieldset
+      {
+      	margin: 0 auto;
+      	display: inline-block;
+      	border: 1px solid black;
+      	height:75px;
+      }
+      .SearchForm > fieldset > legend,  x:-moz-any-link 
+      {
+         margin:0px;
+      }
+      .ui-pg-input
+      {
+      	height:16px!important;
+      }
+      .ui-dropdownchecklist-selector
+      {
+          padding:3px 0px;
+      }
+      .ui-dropdownchecklist-selector,.ui-dropdownchecklist-item
+      {
+          text-align:left;
+      }
+      #pagernav
+      {
+      	height:30px;
+      }
+      #pagernav > div
+      {
+      	margin-top:3px;
+      }
+      #pagernav_center [dir=ltr]
+      {
+      	padding:0px !important;
+      }
+      #first_pagernav,#prev_pagernav,#next_pagernav,#last_pagernav
+      {
+      	padding-bottom:5px;
+      	width:70px;
+      }
+      .ui-pg-input
+      {
+      	margin-bottom:2px !important;
+      }
+      
+  /*Winni*/
+.DialogForm {
+	text-align: center;
+	table-layout: fixed;
+}
+.DialogForm table {
+	width: 99%;
+}
+.DialogForm select, .DialogForm textarea, .DialogForm input {
+	margin-bottom: 0px;
+	padding: 4px 6px 4px;
+}
+.DialogForm tr
+	{
+		text-align: left;
+	}
+.DialogForm th
+	{
+		text-align: right;
+	}
+.DialogForm input,.DialogForm textarea
+	{
+		width: 98%;
+		font-family: "微軟正黑體" !important;
+		font-size: 16px !important;
+	}
+.DialogForm select
+	{
+		width: 98%;
+	}
+	
+label.error
+{
+	display:block;
+	color:red;
+	font-size:12px;
+}
+span.icon{
+	margin: 0 3px 0 0;
+	cursor: pointer;
+}
+.hiligthBtn{
+	border: 1px solid #FF0000;
+	background-color: #FABFBF;
+}
+.definedColClass .s-ico{
+	display: inline;
+}
+.nav-collapse a{
+	font-family: "微軟正黑體" !important;
+	font-size: 19.5px !important;
+	font-weight: 700;
+}
+div h3 {
+margin: 0 0 0 0 ;
+}
+i.ui-icon {
+	display: inline-block;
+}
+span.ui-icon {
+	display: inline-block;
+}
+div.btn-group:before, div.btn-group:after {
+	display: inline;
+}
+[class^="icon-"], [class*=" icon-"] {
+	 vertical-align: baseline;
+}
+.btn-small .ui-icon {
+	width: 14px;
+	height: 14px;
+}
+.number {
+	text-align: right;
+}
+.input-prepend input[type=text] {
+	width: 65%;
+	display: inline-block;
+	margin-left: -5px;
+}
+.input-prepend .btn-group {
+	display: inline-block;
+}
+.checkbox input[type="checkbox"]{
+	margin-top: 4px;
+}
+.input-append select{
+    width: 45%;
+}
+
+input[type="text"]{
+	height: 30px;
+}
