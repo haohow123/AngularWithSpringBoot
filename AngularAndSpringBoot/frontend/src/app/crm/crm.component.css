@@ -1,0 +1,14 @@
+.table th,.table td{
+    vertical-align: middle;
+    color: white;
+}
+th.workHoursTable {
+    color: white;
+    border: 1px solid grey;
+    background-color: #ff9933;
+}
+td.sumWorkHoursTable {
+    border: 1px solid grey;
+    background-color: #cccccc;
+    text-align: center;
+}
