@@ -1,0 +1,163 @@
+<div class="container-fluid" style="background:url('../../assets/images/page_bg.jpg') repeat-x">
+  <header class="row" style="padding:25px 0px">
+    <section class="col-md-3">
+      <img src='http://www.hy-tech.com.tw/images/LOGO.png' style="margin-left: 32px;margin-top:-17px">
+    </section>
+    <section class="col-md-8">
+      <a>工時管理</a>
+      <a href="/HYCRM/manager/WorkStatus">輸入工時</a>
+      <a href="/HYCRM/manager/StatWorkTimeEmpRpt">個人工時統計報表</a>
+    </section>
+    <section class="col-md-1">
+      <a>
+        <i class="icon-user icon-white"></i>Henry.Hsu</a>
+      <div>
+        <div>CAS</div>
+        <div>HR</div>
+        <div>登出</div>
+      </div>
+    </section>
+  </header>
+  <section class="row breadcrumb">
+    <p style="margin:auto">輸入工時</p>
+  </section>
+  <section class="row">
+    <form class="col-md-7">
+      <fieldset style='border: 1px solid black;padding-left: 15px;'>
+        <legend style="width:auto">搜尋條件:</legend>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-8">
+            <span>姓名:</span>
+            <input class="form-control" id="name" type="text" value="Henry.Hsu" disabled style="width:110px;margin-bottom: 10px;margin-right: 15px">
+            <span>工作週:</span>
+            <input id="datepicker" value="選取日期" style=" width:210px;cursor:pointer;margin-bottom: 10px;margin-left: 10px" type="text">
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-primary" style="width:100%;margin-left:10px;margin-right:10px;margin-bottom: 10px">
+              <i class="icon-search"></i> 搜尋</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <form class="col-md-3">
+      <fieldset style='border: 1px solid black;padding-left: 15px;'>
+        <legend style="width:auto">快速功能:</legend>
+        <button type="button" class="btn btn-primary" id="weekChange" value="this" style="margin-right:10px;margin-bottom: 10px">本　週</button>
+        <button type="button" class="btn btn-primary" id="weekChange" value="prev" style="margin-right:10px;margin-bottom: 10px">上一週</button>
+        <button type="button" class="btn btn-primary" id="weekChange" value="next" style="margin-right:10px;margin-bottom: 10px">下一週</button>
+      </fieldset>
+    </form>
+  </section>
+  <section class="row">
+    <div class="col-md-3">
+      <button id="save" class="btn btn-primary" style="width:100%;">存檔</button>
+    </div>
+    <div class="col-md-7"></div>
+    <div class="col-md-2">
+      <button id="copyFromLastWeek" class="btn btn-primary" style="width:100%;">自上週帶入工時</button>
+    </div>
+  </section>
+  <section class="row">
+    <div class="col-md-12" style="margin-top:10px">
+      <table class="table table-bordered" #workTable>
+        <thead>
+          <tr class="bg-primary">
+            <th class="workHoursTable" colspan="10" style="text-align:right;">本週應工作時數：32小時</th>
+          </tr>
+          <tr class="bg-primary">
+            <th class="workHoursTable" scope="col" style="text-align:right;width:15%">專案名稱</th>
+            <th class="workHoursTable" scope="col">01-01 星期一</th>
+            <th class="workHoursTable" scope="col">01-02 星期二</th>
+            <th class="workHoursTable" scope="col">01-03 星期三</th>
+            <th class="workHoursTable" scope="col">01-04 星期四</th>
+            <th class="workHoursTable" scope="col">01-05 星期五</th>
+            <th class="workHoursTable" scope="col">01-06 星期六</th>
+            <th class="workHoursTable" scope="col">01-07 星期日</th>
+            <th class="workHoursTable" scope="col" style="width:8%;text-align:center">操作</th>
+            <th class="workHoursTable" scope="col" style="width:40%;text-align:center">備註</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="workHoursTable" style="text-align:right;padding: 10px;height: 25px;">1</th>
+            <td style="text-align:center">
+              <input type="text" style="width: 34px;margin:auto;margin-bottom: 2px;margin-top: 2px;text-align: center;" />
+            </td>
+            <td style="text-align:center">
+              <input type="text" style="width: 34px;margin:auto;margin-bottom: 2px;margin-top: 2px;text-align: center;" />
+            </td>
+            <td style="text-align:center">
+              <input type="text" style="width: 34px;margin:auto;margin-bottom: 2px;margin-top: 2px;text-align: center;" />
+            </td>
+            <td style="text-align:center">
+              <input type="text" style="width: 34px;margin:auto;margin-bottom: 2px;margin-top: 2px;text-align: center;" />
+            </td>
+            <td style="text-align:center">
+              <input type="text" style="width: 34px;margin:auto;margin-bottom: 2px;margin-top: 2px;text-align: center;" />
+            </td>
+            <td style="text-align:center">
+              <input type="text" style="width: 34px;margin:auto;margin-bottom: 2px;margin-top: 2px;text-align: center;" />
+            </td>
+            <td style="text-align:center">
+              <input type="text" style="width: 34px;margin:auto;margin-bottom: 2px;margin-top: 2px;text-align: center;" />
+            </td>
+            <td class="sumWorkHoursTable">0</td>
+            <td rowspan="3" style="vertical-align:top;padding:0;margin:0">
+              <textarea [style.height.px]="height" style="width:100%;margin-bottom: 0px;margin-top: 0px;"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th class="workHoursTable" style="text-align:right;padding: 10px;height: 25px;">2</th>
+            <td style="text-align:center">
+              <input type="text" style="width: 34px;margin:auto;margin-bottom: 2px;margin-top: 2px;text-align: center;" />
+            </td>
+            <td style="text-align:center">
+              <input type="text" style="width: 34px;margin:auto;margin-bottom: 2px;margin-top: 2px;text-align: center;" />
+            </td>
+            <td style="text-align:center">
+              <input type="text" style="width: 34px;margin:auto;margin-bottom: 2px;margin-top: 2px;text-align: center;" />
+            </td>
+            <td style="text-align:center">
+              <input type="text" style="width: 34px;margin:auto;margin-bottom: 2px;margin-top: 2px;text-align: center;" />
+            </td>
+            <td style="text-align:center">
+              <input type="text" style="width: 34px;margin:auto;margin-bottom: 2px;margin-top: 2px;text-align: center;" />
+            </td>
+            <td style="text-align:center">
+              <input type="text" style="width: 34px;margin:auto;margin-bottom: 2px;margin-top: 2px;text-align: center;" />
+            </td>
+            <td style="text-align:center">
+              <input type="text" style="width: 34px;margin:auto;margin-bottom: 2px;margin-top: 2px;text-align: center;" />
+            </td>
+            <td class="sumWorkHoursTable">0</td>
+          </tr>
+          <tr>
+            <th class="workHoursTable" style="text-align:right;padding: 10px;height: 25px;">3</th>
+            <td style="text-align:center" class="sumWorkHoursTable">0</td>
+            <td style="text-align:center" class="sumWorkHoursTable">0</td>
+            <td style="text-align:center" class="sumWorkHoursTable">0</td>
+            <td style="text-align:center" class="sumWorkHoursTable">0</td>
+            <td style="text-align:center" class="sumWorkHoursTable">0</td>
+            <td style="text-align:center" class="sumWorkHoursTable">0</td>
+            <td style="text-align:center" class="sumWorkHoursTable">0</td>
+            <td class="sumWorkHoursTable">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <footer class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-2">
+      <a>
+        <img src="http://www.hy-tech.com.tw/images/logo_ft.png">
+      </a>
+    </div>
+    <div class="col-md-8" style="word-break:keep-all">
+      Add:11575 台北市南港區忠孝東路六段21號6樓 Tel：&#8203;(02)2788-2322 Fax：(02)2788-5722
+      <br>
+      <span>Copyright©2011.Hung Yang Software Tech.Co.,LTD.All rights reserved.</span>
+    </div>
+  </footer>
+</div>
