@@ -20,6 +20,7 @@ import { CrmComponent } from './crm/crm.component';
 import { HeroService } from './tour-of-heroes/heros/service/hero.service';
 import { MessageService } from './tour-of-heroes/messages/service/message.service';
 import { InMemoryDataService } from './in-memory-data.service';
+import { AjaxServiceService } from './/service/ajax-service.service';
 
 
 
@@ -50,7 +51,7 @@ import { InMemoryDataService } from './in-memory-data.service';
     //   InMemoryDataService, { dataEncapsulation: false }
     // )
   ],
-  providers: [HeroService, MessageService, InMemoryDataService],
+  providers: [HeroService, MessageService, InMemoryDataService, AjaxServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
