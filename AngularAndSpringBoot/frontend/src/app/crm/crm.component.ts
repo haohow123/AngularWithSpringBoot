@@ -15,7 +15,8 @@ export class CrmComponent implements OnInit {
     console.log('i do');
     this.height = this.workTable.nativeElement.offsetHeight - 95;
     console.log(this.height);
-    this.ajaxService.get('/Member/getAllMember').subscribe(
+    this.ajaxService.get('/Member/getAllMember',{'Content-Type': 'application/x-www-form-urlencoded'})
+    .subscribe(
       res=>console.log(res)
     );
   }

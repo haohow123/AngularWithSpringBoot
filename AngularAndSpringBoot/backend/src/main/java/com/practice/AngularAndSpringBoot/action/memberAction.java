@@ -17,7 +17,7 @@ public class memberAction {
 	@Autowired
 	private IMemberFacade iMemberFacade;
 	
-	@RequestMapping(value="/getAllMember",method=RequestMethod.GET)
+	@RequestMapping(value="/getAllMember",method=RequestMethod.POST)
 	public List<Member> getAllMemberData() {
 		return iMemberFacade.getAllMemberData();
 	}
