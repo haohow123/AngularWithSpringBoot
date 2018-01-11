@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app_TEST';
+  isActive(pathname): boolean{
+    return window.location.pathname.indexOf(pathname) != -1;
+  }
 }

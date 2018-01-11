@@ -19,7 +19,7 @@ export class AjaxServiceService {
     return (error): Observable<T> => {
 
       //send the error to remote logging infrastructure
-      console.log(error);
+      console.warn(error);
 
       //Let the app keep running by returing an empty result.
       return of(result as T);

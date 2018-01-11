@@ -1,6 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<!-- <nav>
-  <a routerLink="tourOfHero">Tour Of Hero</a>
-  <a routerLink="/CRM">CRM</a>
-</nav> -->
+<h1>AngularAndSpringBoot</h1>
+<nav>
+  <a routerLink="tourOfHero" [ngClass]="{active:isActive('tourOfHero')}">Tour Of Hero</a>
+  <a routerLink="/CRM" [ngClass]="{active:isActive('CRM')}">CRM</a>
+</nav>
 <router-outlet></router-outlet>

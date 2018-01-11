@@ -1,8 +1,9 @@
 /* AppComponent's private CSS styles */
-h1 {
+  h1 {
     font-size: 1.2em;
     color: #999;
     margin-bottom: 0;
+    margin-top: 0;
   }
   h2 {
     font-size: 2em;
@@ -25,5 +26,6 @@ h1 {
     background-color: #CFD8DC;
   }
   nav a.active {
-    color: #039be5;
+    color: white;
+    background-color: black;
   }

@@ -1,23 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HerosComponent } from './tour-of-heroes/heros/heros.component';
-import { DashboardComponent } from './tour-of-heroes/dashboard/dashboard.component'
-import { HeroDetailComponent } from './tour-of-heroes/hero-detail/hero-detail.component';
-import { TutorialLinkComponent } from './tour-of-heroes/tutorial-link/tutorial-link.component';
-import { TourOfHeroesComponent } from './tour-of-heroes/tour-of-heroes.component';
+import { TourOfHeroesModule } from './tour-of-heroes/tour-of-heroes.module';
+
 import { CrmComponent } from './crm/crm.component';
+import { TourOfHeroesComponent } from './tour-of-heroes/tour-of-heroes.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'tourOfHero', pathMatch: "full" },
   { path: 'CRM', component: CrmComponent },
   {
     path: 'tourOfHero',
     component: TourOfHeroesComponent,
-    children: [
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'detail/:id', component: HeroDetailComponent },
-      { path: 'heroes', component: HerosComponent },
-      { path: 'turtorial', component: TutorialLinkComponent },
-    ]
+    loadChildren: () => TourOfHeroesModule
   },
   { path: '**', redirectTo: '/tourOfHero', pathMatch: 'full' }
 ];
