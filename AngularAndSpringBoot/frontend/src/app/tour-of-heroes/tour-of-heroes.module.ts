@@ -28,6 +28,7 @@ import { RouterService } from '../service/router.service';
     TutorialLinkComponent,
     TourOfHeroesComponent
   ],
+  providers: [RouterService],
   bootstrap: [TourOfHeroesComponent]
 })
 export class TourOfHeroesModule { }
